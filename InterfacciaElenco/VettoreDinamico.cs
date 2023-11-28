@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace InterfacciaElenco
+﻿namespace InterfacciaElenco
 {
     class VettoreDinamico : IElenco
     {
@@ -19,7 +15,7 @@ namespace InterfacciaElenco
 
         public int Count => count;
 
-        public int Length => length; 
+        public int Length => length;
 
         public void Add(string item)
         {
@@ -63,17 +59,17 @@ namespace InterfacciaElenco
                     vettore[i] = null;
                 }
             }
-            ReorderArray();
+            ShiftAndDivide();
         }
 
         public void RemoveAt(int index)
         {
             // rimozione elemento
             vettore[index] = null;
-            ReorderArray();
+            ShiftAndDivide();
         }
 
-        private void ReorderArray()
+        private void ShiftAndDivide()
         {
             // shift
             string[] vettoreShift = new string[length];
