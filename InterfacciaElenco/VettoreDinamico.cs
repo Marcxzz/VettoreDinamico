@@ -83,17 +83,7 @@ namespace InterfacciaElenco
             }
             vettore = vettoreShift;
             // divisione del vettore
-            // conta del numero di elementi null
-            int nullItems = 0;
-            for (int i = 0; i < length; i++)
-            {
-                if (vettore[i] == null)
-                {
-                    nullItems++;
-                }
-            }
-            // divisione vettore
-            if (nullItems > (length / 2))
+            if (count < (length / 2))
             {
                 string[] tempVettore = new string[length / 2];
                 for (int i = 0; i < length / 2; i++)
