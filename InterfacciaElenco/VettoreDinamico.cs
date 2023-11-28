@@ -64,7 +64,6 @@
 
         public void RemoveAt(int index)
         {
-            // rimozione elemento
             vettore[index] = null;
             ShiftAndDivide();
         }
